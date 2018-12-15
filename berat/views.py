@@ -8,7 +8,7 @@ from datetime import datetime
 
 def index(request):
     template = loader.get_template('berat/index.html')
-    data = Berat.objects.order_by('tanggal')
+    data = Berat.objects.order_by('-berat_max')
 
     avg_max = 0
     avg_min = 0
